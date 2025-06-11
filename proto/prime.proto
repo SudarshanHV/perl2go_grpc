@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package prime;
+
+option go_package = "../go_server";
+
+import "google/api/annotations.proto";
+
+service PrimeService {
+    rpc GetPrimes (PrimeRequest) returns (PrimeResponse){
+        option(google.api.http) = {
+            get: "/v1/primes"
+        };
+    }
+}
+
+message PrimeRequest {
+    int32 limit = 1;
+}
+
+message PrimeResponse {
+    repeated int32 primes = 1;
+}
