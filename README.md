@@ -1,6 +1,13 @@
 # perl2go_grpc
 Experimental project using a Golang gRPC service with HTTP gateway for prime number generation, with emphasis on Perl to 2 Go communication
 
+## Prerequisites
+
+* Go 1.24.3 or later
+* Protocol Buffers compiler (protoc), if an error props up
+* Perl (for running the client example). This is not needed if you just want to check the endpoint, which can be done anyhow.
+* Do a "go mod tidy" before running
+
 ## Running the Service
 
 ### 1. Start the HTTP gateway (in another terminal)
